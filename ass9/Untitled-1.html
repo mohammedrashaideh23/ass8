@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+</head>
+<body>
+    <!-- All outputs are in the console -->
+    <script>
+        // Exercise 1: Filter function on String object
+        String.prototype.filter = function(bannedWord) {
+            return this.split(' ').filter(word => word !== bannedWord).join(' ');
+        };
+
+        console.log("This house is not nice!".filter('not')); // Output: "This house is nice!"
+    </script>
+</body>
+</html>
